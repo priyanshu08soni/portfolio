@@ -1,0 +1,180 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { ExternalLink, Github, Calendar, Tag } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import Navigation from "@/components/navigation"
+
+const projects = [
+  {
+    id: 1,
+    title: "Properties - Real Estate NFT DApp",
+    description: "A Blockchain Real Estate NFT DApp utilizing ERC-721 standard for seamless property transactions between buyer & seller, integrating lenders, inspectors, and appraisers.",
+    image: "/blockchain-real-estate-nft-dapp-interface.png",
+    technologies: ["Solidity", "React.js", "Hardhat", "Metamask", "ERC-721"],
+    liveUrl: "#",
+    githubUrl: "#",
+    period: "Jan 12 - Mar 20, 2025",
+    category: "Blockchain"
+  },
+  {
+    id: 2,
+    title: "QuizTopia - Interactive Quiz Platform",
+    description: "A full-stack interactive quiz application built using React.js for the frontend and Express.js with MongoDB for the backend. Features real-time scoring and user management.",
+    image: "/interactive-quiz-app.png",
+    technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "REST API"],
+    liveUrl: "#",
+    githubUrl: "#",
+    period: "Sep 20 - Oct 25, 2024",
+    category: "Full-Stack"
+  },
+  {
+    id: 3,
+    title: "MS - Market Screeners",
+    description: "A stock market website showcasing data from over 50 historical stocks with visual analytics to enhance market understanding with the help of charts & calculations.",
+    image: "/stock-market-dashboard.png",
+    technologies: ["React.js", "Chart.js", "Python", "Kaggle Dataset", "Data Analytics"],
+    liveUrl: "#",
+    githubUrl: "#",
+    period: "Nov 8 - Dec 2, 2024",
+    category: "Data Analytics"
+  },
+  {
+    id: 4,
+    title: "Alabay - Gaming Website",
+    description: "A gaming website highlighting new game releases, merchandise, and industry trends. Designed to help enthusiasts stay updated with new developments and exciting launches.",
+    image: "/modern-gaming-website.png",
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "#",
+    githubUrl: "#",
+    period: "Aug 12 - Sep 10, 2024",
+    category: "Frontend"
+  }
+]
+
+export default function ProjectsPage() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
+  const categories = ["All", "Blockchain", "Full-Stack", "Data Analytics", "Frontend"]
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory)
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <div className="pt-20 px-4 pb-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              My <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              A showcase of my technical expertise across blockchain, full-stack development, 
+              data analytics, and modern web technologies.
+            </p>
+          </div>
+
+          {/* Category Filter */}
+          <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                onClick={() => setSelectedCategory(category)}
+                className={`rounded-full transition-all duration-300 hover:scale-105 ${
+                  selectedCategory === category
+                    ? "bg-purple-600 hover:bg-purple-700 text-white"
+                    : "border-purple-500 text-purple-400 hover:bg-purple-500/10"
+                }`}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredProjects.map((project, index) => (
+              <Card 
+                key={project.id}
+                className={`bg-white/5 border-purple-500/20 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 group ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${400 + index * 200}ms` }}
+              >
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img 
+                    src={project.image || "/placeholder.svg"} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-purple-500/80 text-white">
+                      {project.category}
+                    </Badge>
+                  </div>
+                </div>
+                
+                <CardHeader>
+                  <div className="flex items-center text-sm text-gray-400 mb-2">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {project.period}
+                  </div>
+                  <CardTitle className="text-xl text-white group-hover:text-purple-300 transition-colors">
+                    {project.title}
+                  </CardTitle>
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <Badge 
+                        key={tech} 
+                        variant="secondary" 
+                        className="bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 transition-colors"
+                      >
+                        <Tag className="w-3 h-3 mr-1" />
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-4 pt-4">
+                    <Link href={project.liveUrl}>
+                      <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 hover:scale-105">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </Button>
+                    </Link>
+                    <Link href={project.githubUrl}>
+                      <Button variant="outline" size="sm" className="border-purple-500 text-purple-400 hover:bg-purple-500/10 transition-all duration-300 hover:scale-105">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
