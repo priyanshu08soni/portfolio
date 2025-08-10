@@ -16,7 +16,7 @@ const achievements = [
     icon: Code,
     color: "text-green-400",
     date: "Ongoing",
-    link: "#",
+    link: "https://leetcode.com/u/Priyanshu834/",
     linkText: "View Profile",
     category: "Coding"
   },
@@ -27,7 +27,7 @@ const achievements = [
     icon: Trophy,
     color: "text-blue-400",
     date: "Ongoing",
-    link: "#",
+    link: "https://codeforces.com/profile/Priyanshus20k4",
     linkText: "View Profile",
     category: "Competitive Programming"
   },
@@ -38,7 +38,7 @@ const achievements = [
     icon: Award,
     color: "text-purple-400",
     date: "2024",
-    link: "#",
+    link: "https://drive.google.com/file/d/1b0dcycnxUmSljPxYqacS_anxQOf_pnq6/view?usp=sharing",
     linkText: "View Certificate",
     category: "Certification"
   },
@@ -49,7 +49,7 @@ const achievements = [
     icon: Star,
     color: "text-yellow-400",
     date: "2024",
-    link: "#",
+    link: "https://www.nullclass.com/certificates/6688c2b3425b9cb57ce7ff7c",
     linkText: "View Certificate",
     category: "Professional"
   }
@@ -135,7 +135,7 @@ export default function AchievementsPage() {
                   </CardHeader>
                   
                   <CardContent className="space-y-4">
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed pb-3">
                       {achievement.description}
                     </p>
                     

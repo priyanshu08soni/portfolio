@@ -542,7 +542,7 @@ export default function SkillsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-300 text-center">
+              <p className="text-gray-300 text-center"> (Desktop)
                 Tap on any category to expand and see the skills and their connections. 
                 Each skill shows related technologies I use in real projects.
               </p>

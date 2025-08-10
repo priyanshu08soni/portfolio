@@ -22,21 +22,21 @@ const contactInfo = [
     icon: Github,
     label: "GitHub",
     value: "github.com/priyanshu08soni",
-    href: "#",
+    href: "https://github.com/priyanshu08soni/",
     color: "text-gray-400"
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/priyanshu-soni-180219257",
-    href: "#",
+    href: "https://www.linkedin.com/in/priyanshu-soni-180219257/",
     color: "text-blue-400"
   },
   {
     icon: MapPin,
     label: "Location",
     value: "Bengaluru, India",
-    href: "#",
+    href: "https://maps.app.goo.gl/qJkXwjmwW8yG1KUZ6",
     color: "text-green-400"
   }
 ]
@@ -245,7 +245,7 @@ export default function ContactPage() {
                     Email Me
                   </Button>
                 </Link>
-                <Link href="#">
+                <Link href="https://www.linkedin.com/in/priyanshu-soni-180219257/">
                   <Button variant="outline" size="lg" className="border-purple-500 text-purple-400 hover:bg-purple-500/10 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
                     <Linkedin className="mr-2 w-5 h-5" />
                     Connect on LinkedIn

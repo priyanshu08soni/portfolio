@@ -9,49 +9,50 @@ import { Button } from "@/components/ui/button"
 import Navigation from "@/components/navigation"
 
 const projects = [
+  
   {
     id: 1,
-    title: "Properties - Real Estate NFT DApp",
-    description: "A Blockchain Real Estate NFT DApp utilizing ERC-721 standard for seamless property transactions between buyer & seller, integrating lenders, inspectors, and appraisers.",
-    image: "/blockchain-real-estate-nft-dapp-interface.png",
-    technologies: ["Solidity", "React.js", "Hardhat", "Metamask", "ERC-721"],
-    liveUrl: "#",
-    githubUrl: "#",
-    period: "Jan 12 - Mar 20, 2025",
-    category: "Blockchain"
-  },
-  {
-    id: 2,
     title: "QuizTopia - Interactive Quiz Platform",
     description: "A full-stack interactive quiz application built using React.js for the frontend and Express.js with MongoDB for the backend. Features real-time scoring and user management.",
     image: "/interactive-quiz-app.png",
     technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "REST API"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://luxury-sherbet-7950f9.netlify.app/home",
+    githubUrl: "https://github.com/priyanshu08soni/quiz-app",
     period: "Sep 20 - Oct 25, 2024",
     category: "Full-Stack"
   },
   {
-    id: 3,
+    id: 2,
     title: "MS - Market Screeners",
     description: "A stock market website showcasing data from over 50 historical stocks with visual analytics to enhance market understanding with the help of charts & calculations.",
     image: "/stock-market-dashboard.png",
     technologies: ["React.js", "Chart.js", "Python", "Kaggle Dataset", "Data Analytics"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://ms-stock-market-website.vercel.app/",
+    githubUrl: "https://github.com/priyanshu08soni/MS-Stock-Market-Website",
     period: "Nov 8 - Dec 2, 2024",
     category: "Data Analytics"
   },
   {
-    id: 4,
+    id: 3,
     title: "Alabay - Gaming Website",
     description: "A gaming website highlighting new game releases, merchandise, and industry trends. Designed to help enthusiasts stay updated with new developments and exciting launches.",
     image: "/modern-gaming-website.png",
     technologies: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://alabay-game.vercel.app/",
+    githubUrl: "https://github.com/priyanshu08soni/Alabay-Game",
     period: "Aug 12 - Sep 10, 2024",
     category: "Frontend"
+  },
+  {
+    id: 4,
+    title: "Properties - Real Estate NFT DApp",
+    description: "A Blockchain Real Estate NFT DApp utilizing ERC-721 standard for seamless property transactions between buyer & seller, integrating lenders, inspectors, and appraisers.",
+    image: "/blockchain-real-estate-nft-dapp-interface.png",
+    technologies: ["Solidity", "React.js", "Hardhat", "Metamask", "ERC-721"],
+    videoUrl: "https://drive.google.com/file/d/1D_fiKeI6i_aIWko2_pvKMeOM_D7IdVKp/view?usp=sharing",
+    githubUrl: "https://github.com/priyanshu08soni/WEB3-property-dealing--NFT-",
+    period: "Jan 12 - Mar 20, 2025",
+    category: "Blockchain"
   }
 ]
 
@@ -156,12 +157,22 @@ export default function ProjectsPage() {
                   </div>
                   
                   <div className="flex gap-4 pt-4">
-                    <Link href={project.liveUrl}>
-                      <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 hover:scale-105">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </Button>
-                    </Link>
+                    {project?.liveUrl && 
+                      <Link href={project.liveUrl}>
+                        <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 hover:scale-105">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      </Link>
+                    }
+                    {project?.videoUrl && 
+                      <Link href={project.videoUrl}>
+                        <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 hover:scale-105">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Video
+                        </Button>
+                      </Link>
+                    }
                     <Link href={project.githubUrl}>
                       <Button variant="outline" size="sm" className="border-purple-500 text-purple-400 hover:bg-purple-500/10 transition-all duration-300 hover:scale-105">
                         <Github className="w-4 h-4 mr-2" />
