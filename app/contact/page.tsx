@@ -85,8 +85,7 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+              {/* Contact Information */}
               <Card className="bg-white/5 border-purple-500/20 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">
@@ -116,7 +115,6 @@ export default function ContactPage() {
                   })}
                 </CardContent>
               </Card>
-
               {/* Quick Links */}
               <Card className="bg-white/5 border-purple-500/20 backdrop-blur-sm">
                 <CardHeader>
@@ -142,90 +140,6 @@ export default function ContactPage() {
                   </Link>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Contact Form */}
-            <Card className={`bg-white/5 border-purple-500/20 backdrop-blur-sm transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <CardHeader>
-                <CardTitle className="text-2xl text-white flex items-center">
-                  <MessageSquare className="w-6 h-6 text-purple-400 mr-3" />
-                  Send Me a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-gray-300">
-                        <User className="w-4 h-4 inline mr-2" />
-                        Name
-                      </Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your Name"
-                        className="bg-white/10 border-purple-500/30 text-white placeholder-gray-400 focus:border-purple-400"
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-gray-300">
-                        <Mail className="w-4 h-4 inline mr-2" />
-                        Email
-                      </Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        className="bg-white/10 border-purple-500/30 text-white placeholder-gray-400 focus:border-purple-400"
-                        required
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="subject" className="text-gray-300">Subject</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What's this about?"
-                      className="bg-white/10 border-purple-500/30 text-white placeholder-gray-400 focus:border-purple-400"
-                      required
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-gray-300">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project or just say hello!"
-                      rows={6}
-                      className="bg-white/10 border-purple-500/30 text-white placeholder-gray-400 focus:border-purple-400 resize-none"
-                      required
-                    />
-                  </div>
-                  
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
-                  >
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Call to Action */}
