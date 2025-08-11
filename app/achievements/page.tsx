@@ -59,7 +59,7 @@ const stats = [
   { label: "LeetCode Problems", value: "200+", color: "text-green-400" },
   { label: "GitHub Repositories", value: "25+", color: "text-blue-400" },
   { label: "Certifications", value: "2", color: "text-purple-400" },
-  { label: "Projects Completed", value: "5+", color: "text-yellow-400" }
+  { label: "Major Projects Completed", value: "5+", color: "text-yellow-400" }
 ]
 
 export default function AchievementsPage() {
