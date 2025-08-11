@@ -48,9 +48,6 @@ export default function AboutPage() {
                         className="w-full h-full object-cover object-center"
                       />
                     </div>
-                    <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center border-4 border-slate-900">
-                      <span className="text-white text-xs font-bold">4th</span>
-                    </div>
                   </div>
 
                   {/* Profile Info */}
@@ -91,17 +88,17 @@ export default function AboutPage() {
                     <Badge variant="secondary" className="bg-purple-500/20 text-purple-300 mr-3">
                       2022 - Present
                     </Badge>
-                    <span className="text-green-400 font-semibold">3rd Year</span>
+                    <span className="text-green-400 font-semibold">4th Year</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Bachelor of Technology</h3>
                   <p className="text-purple-300 font-medium mb-2">Computer Science & Design Engineering</p>
                   <div className="flex items-center text-gray-400 mb-2">
                     <MapPin className="w-4 h-4 mr-2" />
-                    Rajiv Gandhi Institute of Petroleum Technology, Lucknow
+                    Energy Institute of Bengaluru, Bengaluru
                   </div>
                   <div className="flex items-center">
                     <Award className="w-4 h-4 mr-2 text-yellow-400" />
-                    <span className="text-yellow-400 font-semibold">CGPA: 8.29</span>
+                    <span className="text-yellow-400 font-semibold">CGPA: 8.32</span>
                   </div>
                 </div>
               </CardContent>
