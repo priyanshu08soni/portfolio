@@ -100,8 +100,8 @@ export default function HomePage() {
 
                 {/* Role Animation with Sliding Reveal */}
                 <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 min-h-[3rem] flex items-center justify-center lg:justify-start">
-                  <span className="mr-3">I'm a</span>
                   <div className="relative overflow-hidden min-w-[280px]">
+                    <span className="mr-2">I'm a</span>
                     <span
                       className={`text-red-400 font-semibold transition-all duration-1000 delay-700 ${
                         isVisible ? "translate-y-0" : "translate-y-full"
@@ -227,7 +227,7 @@ export default function HomePage() {
         {/* Clickable Scroll Indicator */}
         <button
           onClick={scrollToStats}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:scale-110 transition-transform duration-900 cursor-pointer group z-20"
+          className="absolute bottom-8 transform -translate-x-1/2 animate-bounce hover:scale-110 transition-transform duration-900 cursor-pointer group z-20"
           aria-label="Scroll to next section"
         >
           <div className="flex flex-col items-center bg-black/20 backdrop-blur-sm rounded-full p-3 border border-red-600/30">

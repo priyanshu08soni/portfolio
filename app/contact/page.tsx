@@ -192,7 +192,7 @@ export default function ContactPage() {
                     Email Me
                   </Button>
                 </Link>
-                <Link href="#">
+                <Link href="https://www.linkedin.com/in/priyanshu-soni-180219257/">
                   <Button
                     variant="outline"
                     size="lg"

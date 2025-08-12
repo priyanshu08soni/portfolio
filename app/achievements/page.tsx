@@ -29,7 +29,7 @@ const achievements = [
     date: "Ongoing",
     link: "https://codeforces.com/profile/Priyanshus20k4",
     linkText: "View Profile",
-    category: "Competitive Programming"
+    category: "CP"
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const stats = [
   { label: "LeetCode Problems", value: "200+", color: "text-red-400" },
   { label: "GitHub Repositories", value: "25+", color: "text-gray-400" },
   { label: "Certifications", value: "2", color: "text-red-400" },
-  { label: "Major Projects Completed", value: "5+", color: "text-gray-400" }
+  { label: "Major Projects", value: "5+", color: "text-gray-400" }
 ]
 
 export default function AchievementsPage() {
@@ -177,7 +177,7 @@ export default function AchievementsPage() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-gray-600 text-gray-300 hover:bg-gray-700/50 transition-all duration-300 hover:scale-105 bg-transparent"
+                          className="mt-3 border-gray-600 text-gray-300 hover:bg-gray-700/50 transition-all duration-300 hover:scale-105 bg-transparent"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           {achievement.linkText}
