@@ -2,12 +2,9 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Mail, Github, Linkedin, MapPin, Phone, Send, User, MessageSquare } from 'lucide-react'
+import { Mail, Github, Linkedin, MapPin } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import Navigation from "@/components/navigation"
 
 const contactInfo = [
