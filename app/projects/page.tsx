@@ -11,6 +11,18 @@ import Navigation from "@/components/navigation";
 const projects = [
   {
     id: 1,
+    title: "LeadSync - Smart Lead Management System",
+    description:
+      "Lead management system, AG Grid with server-side filtering & pagination, secure CRUD APIs. Implementing advanced filtering and protecting routes. Server-side query operators, JWT with httpOnly cookies, and middleware-based route protection.",
+    image: "/leadsync.png",
+    technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "REST API"],
+    liveUrl: "https://lead-sync-management.vercel.app",
+    githubUrl: "https://github.com/priyanshu08soni/LeadSync",
+    period: "Aug - Present, 2025",
+    category: "Full-Stack",
+  },
+  {
+    id: 2,
     title: "QuizTopia - Interactive Quiz Platform",
     description:
       "A full-stack interactive quiz application built using React.js for the frontend and Express.js with MongoDB for the backend. Features real-time scoring and user management.",
@@ -18,11 +30,23 @@ const projects = [
     technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "REST API"],
     liveUrl: "https://luxury-sherbet-7950f9.netlify.app/home",
     githubUrl: "https://github.com/priyanshu08soni/quiz-app",
-    period: "Sep 20 - Oct 25, 2024",
+    period: "Jan - Mar, 2025",
     category: "Full-Stack",
   },
   {
-    id: 2,
+    id: 3,
+    title: "MegaMinds - Creating Creative Images",
+    description:
+      "Developed AI-powered image editing platform with restore, recolor, and object removal. Integrated credit-based payment system and gallery. Used Cloudinary for storage and async AI APIs for processing. Integrated Stripe for secure transactions.",
+    image: "/saas.png",
+    technologies: ["React.js", "Express.js", "MongoDB", "Node.js", "REST API"],
+    liveUrl: "https://megaminds-app.vercel.app",
+    githubUrl: "https://github.com/priyanshu08soni/ai-saas-app",
+    period: "Nov - Dec, 2024",
+    category: "Full-Stack",
+  },
+  {
+    id: 4,
     title: "MS - Market Screeners",
     description:
       "A stock market website showcasing data from over 50 historical stocks with visual analytics to enhance market understanding with the help of charts & calculations.",
@@ -36,34 +60,9 @@ const projects = [
     ],
     liveUrl: "https://ms-stock-market-website.vercel.app/",
     githubUrl: "https://github.com/priyanshu08soni/MS-Stock-Market-Website",
-    period: "Nov 8 - Dec 2, 2024",
-    category: "Data Analytics",
-  },
-  {
-    id: 3,
-    title: "Alabay - Gaming Website",
-    description:
-      "A gaming website highlighting new game releases, merchandise, and industry trends. Designed to help enthusiasts stay updated with new developments and exciting launches.",
-    image: "/modern-gaming-website.png",
-    technologies: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
-    liveUrl: "https://alabay-game.vercel.app/",
-    githubUrl: "https://github.com/priyanshu08soni/Alabay-Game",
-    period: "Aug 12 - Sep 10, 2024",
+    period: "Sep - Oct, 2024",
     category: "Frontend",
-  },
-  {
-    id: 4,
-    title: "Properties - Real Estate NFT DApp",
-    description:
-      "A Blockchain Real Estate NFT DApp utilizing ERC-721 standard for seamless property transactions between buyer & seller, integrating lenders, inspectors, and appraisers.",
-    image: "/blockchain-real-estate-nft-dapp-interface.png",
-    technologies: ["Solidity", "React.js", "Hardhat", "Metamask", "ERC-721"],
-    videoUrl:
-      "https://drive.google.com/file/d/1D_fiKeI6i_aIWko2_pvKMeOM_D7IdVKp/view?usp=sharing",
-    githubUrl: "https://github.com/priyanshu08soni/WEB3-property-dealing--NFT-",
-    period: "Jan 12 - Mar 20, 2025",
-    category: "Blockchain",
-  },
+  }
 ];
 
 export default function ProjectsPage() {
@@ -72,9 +71,7 @@ export default function ProjectsPage() {
 
   const categories = [
     "All",
-    "Blockchain",
     "Full-Stack",
-    "Data Analytics",
     "Frontend",
   ];
 
@@ -222,18 +219,6 @@ export default function ProjectsPage() {
                           </Button>
                         </Link>
                       )}
-                      {project?.videoUrl && (
-                        <Link href={project.videoUrl}>
-                          <Button
-                            size="sm"
-                            className="bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
-                          </Button>
-                        </Link>
-                      )}
-
                       <Link href={project.githubUrl}>
                         <Button
                           variant="outline"
