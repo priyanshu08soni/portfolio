@@ -192,9 +192,9 @@ export default function HomePage() {
                 {/* Professional image container */}
                 <div className="relative w-64 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[28rem] rounded-2xl overflow-hidden border-2 border-red-600/30 shadow-2xl shadow-red-600/20 hover:scale-105 transition-transform duration-500 mx-auto">
                   <img
-                    src="/images/priyanshu-professional.png"
+                    src="/images/priyanshu.png"
                     alt="Priyanshu Soni - Professional Developer"
-                    className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover object-center hover:grayscale-0 transition-all duration-500"
                   />
 
                   {/* Professional overlay */}
