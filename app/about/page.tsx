@@ -14,7 +14,7 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Navigation />
 
       <div className="pt-20 px-4 pb-16">
@@ -23,7 +23,7 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <div className="relative overflow-hidden mb-6">
               <h1
-                className={`text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${
+                className={`text-4xl md:text-6xl font-bold text-red-500 transition-all duration-1000 ${
                   isVisible ? "translate-y-0" : "translate-y-full"
                 }`}
               >
@@ -38,7 +38,7 @@ export default function AboutPage() {
 
             <div className="relative overflow-hidden">
               <p
-                className={`text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
+                className={`text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
@@ -59,7 +59,7 @@ export default function AboutPage() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+            <Card className="bg-gray-900/80 border-gray-700/50 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row items-center gap-8">
                   {/* Profile Info */}
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Education Section */}
             <Card
-              className={`bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-800 ${
+              className={`bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-800 ${
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
             {/* Experience Section */}
             <Card
-              className={`bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 ${
+              className={`bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 ${
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
               }`}
             >
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
           {/* Personal Summary */}
           <Card
-            className={`mt-12 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1200 ${
+            className={`mt-12 bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >

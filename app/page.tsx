@@ -32,7 +32,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -69,7 +69,7 @@ export default function HomePage() {
                 <div className="space-y-2">
                   <div className="relative overflow-hidden">
                     <h1
-                      className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight transition-all duration-1000 delay-300 ${
+                      className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-red-500 leading-tight transition-all duration-1000 delay-300 ${
                         isVisible ? "translate-y-0" : "translate-y-full"
                       }`}
                     >
@@ -99,7 +99,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Role Animation with Sliding Reveal */}
-                <div className="text-xl sm:text-2xl lg:text-3xl text-gray-300 min-h-[3rem] flex items-center justify-center lg:justify-start">
+                <div className="text-xl sm:text-2xl lg:text-3xl text-gray-500 min-h-[3rem] flex items-center justify-center lg:justify-start">
                   <div className="relative overflow-hidden min-w-[280px]">
                     <span className="mr-2">I'm a</span>
                     <span
@@ -240,7 +240,7 @@ export default function HomePage() {
       </section>
 
       {/* Quick Stats Section */}
-      <section id="stats-section" className="py-16 lg:py-24 px-4 bg-gray-900/50 backdrop-blur-sm">
+      <section id="stats-section" className="py-16 lg:py-24 px-4 bg-gray-900/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           {/* Section Header with Reveal Animation */}
           <div className="text-center mb-12">

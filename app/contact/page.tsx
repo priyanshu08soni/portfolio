@@ -52,7 +52,7 @@ export default function ContactPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Navigation />
 
       <div className="pt-20 px-4 pb-16">
@@ -61,7 +61,7 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <div className="relative overflow-hidden mb-6">
               <h1
-                className={`text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${
+                className={`text-4xl md:text-6xl font-bold text-red-500 transition-all duration-1000 ${
                   isVisible ? "translate-y-0" : "translate-y-full"
                 }`}
               >
@@ -77,7 +77,7 @@ export default function ContactPage() {
 
             <div className="relative overflow-hidden">
               <p
-                className={`text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
+                className={`text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
@@ -97,7 +97,7 @@ export default function ContactPage() {
             <div
               className={`space-y-8 transition-all duration-1000 delay-600 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             >
-              <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+              <Card className="bg-gray-900/80 border-gray-700/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Contact Information</CardTitle>
                 </CardHeader>
@@ -135,7 +135,7 @@ export default function ContactPage() {
              
 
               {/* Quick Links */}
-              <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+              <Card className="bg-gray-900/80 border-gray-700/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Quick Links</CardTitle>
                 </CardHeader>
@@ -171,7 +171,7 @@ export default function ContactPage() {
 
           {/* Call to Action */}
           <Card
-            className={`mt-16 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`mt-16 bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <CardContent className="p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Let's Build Something Amazing Together!</h3>

@@ -88,7 +88,7 @@ export default function ProjectsPage() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <Navigation />
 
       <div className="pt-20 px-4 pb-16">
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
           <div className="text-center mb-16">
             <div className="relative overflow-hidden mb-6">
               <h1
-                className={`text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${
+                className={`text-4xl md:text-6xl font-bold text-red-500 transition-all duration-1000 ${
                   isVisible ? "translate-y-0" : "translate-y-full"
                 }`}
               >
@@ -115,7 +115,7 @@ export default function ProjectsPage() {
 
             <div className="relative overflow-hidden">
               <p
-                className={`text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
+                className={`text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
                   isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
@@ -162,7 +162,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project, index) => (
               <div key={project.id} className="relative overflow-hidden">
                 <Card
-                  className={`bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/20 group ${
+                  className={`bg-gray-900/80 border-gray-700/50 backdrop-blur-sm hover:bg-gray-900/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/20 group ${
                     isVisible
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-10"

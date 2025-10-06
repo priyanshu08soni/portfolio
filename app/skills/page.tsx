@@ -225,7 +225,7 @@ export default function SkillsPage() {
   const connectedNodes = hoveredNode ? getConnectedNodes(hoveredNode) : new Set()
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen ">
       <Navigation />
 
       <div className="pt-20 px-4 pb-16">
@@ -234,7 +234,7 @@ export default function SkillsPage() {
           <div className="text-center mb-12">
             <div className="relative overflow-hidden mb-6">
               <h1
-                className={`text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${
+                className={`text-4xl md:text-6xl font-bold text-red-500 transition-all duration-1000 ${
                   isVisible ? "translate-y-0" : "translate-y-full"
                 }`}
               >
@@ -250,7 +250,7 @@ export default function SkillsPage() {
 
             <div className="relative overflow-hidden">
               <p
-                className={`text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
+                className={`text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
                   isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
                 }`}
               >
@@ -274,7 +274,7 @@ export default function SkillsPage() {
                   isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
                 }`}
               >
-                <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm sticky top-24 h-[900px] flex flex-col">
+                <Card className="bg-gray-900/80 border-gray-700/50 backdrop-blur-sm sticky top-24 h-[900px] flex flex-col">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-lg text-white">Filter Skills</CardTitle>
                   </CardHeader>
@@ -284,7 +284,7 @@ export default function SkillsPage() {
                       className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 text-sm ${
                         selectedCategory === null
                           ? "bg-red-600 text-white shadow-lg"
-                          : "bg-gray-800/50 text-gray-300 hover:bg-gray-800/70"
+                          : "bg-gray-900/50 text-white hover:bg-gray-800/70"
                       }`}
                     >
                       <div className="w-6 h-6 rounded-full bg-red-600/20 flex items-center justify-center">
@@ -303,12 +303,10 @@ export default function SkillsPage() {
                           onClick={() => setSelectedCategory(category)}
                           className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-300 hover:scale-105 flex items-center gap-2 text-sm ${
                             selectedCategory === category
-                              ? "text-white shadow-lg"
-                              : "bg-gray-800/50 text-gray-300 hover:bg-gray-800/70"
+                              ? "text-white shadow-lg bg-gray-900"
+                              : "bg-gray-800/70 text-gray-300 hover:bg-gray-800/50"
                           }`}
-                          style={{
-                            backgroundColor: selectedCategory === category ? color : "transparent",
-                          }}
+                          
                         >
                           <div
                             className="w-6 h-6 rounded-full flex items-center justify-center"
@@ -517,7 +515,7 @@ export default function SkillsPage() {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 text-sm ${
-                    selectedCategory === category ? "text-white" : "border text-gray-300 hover:bg-gray-800/50"
+                    selectedCategory === category ? "text-white" : "border text-gray-500 hover:bg-gray-800/50"
                   }`}
                   style={{
                     backgroundColor: selectedCategory === category ? color : "transparent",
@@ -536,7 +534,7 @@ export default function SkillsPage() {
               return (
                 <Card
                   key={category.title}
-                  className={`bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:bg-gray-900/70 ${
+                  className={`bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-500 hover:bg-gray-900/70 ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                   }`}
                   style={{ transitionDelay: `${categoryIndex * 100}ms` }}
@@ -595,7 +593,7 @@ export default function SkillsPage() {
 
           {/* Legend - Desktop Only */}
           <Card
-            className={`mt-8 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 hidden lg:block ${
+            className={`mt-8 bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 hidden lg:block ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
@@ -624,7 +622,7 @@ export default function SkillsPage() {
 
           {/* Mobile Instructions */}
           <Card
-            className={`mt-8 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 lg:hidden ${
+            className={`mt-8 bg-gray-900/80 border-gray-700/50 backdrop-blur-sm transition-all duration-1000 delay-1000 lg:hidden ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >

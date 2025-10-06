@@ -31,14 +31,14 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/90 backdrop-blur-md border-b border-red-600/20" : "bg-transparent"
+        scrolled ? "bg-black/20 backdrop-blur-md border-b border-red-600/20" : "bg-transparent"
       }`}
     >
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2 group">
             <Code2 className="w-8 h-8 text-red-500 group-hover:text-red-400 transition-colors" />
-            <span className="text-xl font-bold text-white group-hover:text-red-400 transition-colors">Priyanshu</span>
+            <span className="text-xl font-bold text-red-500 group-hover:text-red-400 transition-colors">Priyanshu</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +51,7 @@ export default function Navigation() {
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
                     pathname === item.href
                       ? "text-red-400 bg-red-600/20"
-                      : "text-gray-300 hover:text-red-400 hover:bg-red-600/10"
+                      : "text-gray-500 hover:text-red-400 hover:bg-red-600/10"
                   }`}
                 >
                   {item.label}
@@ -66,7 +66,7 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-red-400"
+              className="text-gray-800 hover:text-red-400"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </Button>
