@@ -239,7 +239,7 @@ export default function HomePage() {
         </button>
       </section>
 
-      {/* Quick Stats Section */}
+
       <section id="stats-section" className="py-16 lg:py-24 px-4 bg-gray-900/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
           {/* Section Header with Reveal Animation */}
